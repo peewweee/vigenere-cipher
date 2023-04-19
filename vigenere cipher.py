@@ -1,11 +1,16 @@
 # Assignment 2 PROBLEM 3 The Vigenère Cipher
 # Phoebe Rhone L. Gangoso | BSCPE 1-4
 
-#PSEUDOCODE
+import pyfiglet
+print("")
+title_text = " This is The Vigenère Cipher "
+title_line = title_text.center(150, "*")
+print(title_line)
+print("")
 
 # ask the user to input message and key
-input_message = input("Please enter your message: ")
-input_key = input("What is your key?: ")
+input_message = input("\N{envelope} \033[0;35m Please enter your message: ")
+input_key = input("\N{key} \033[0;33m What is your key?: ")
 # convert message and key to uppercase letters
 input_message = input_message.upper()
 input_key = input_key.upper()
@@ -32,6 +37,10 @@ def vigenere_cipher(input_message, input_key):
     return cipher_text
 
 # encrypt message with key using the function
-ciphertext = vigenere_cipher(input_message, input_key)
+cipher_text = vigenere_cipher(input_message, input_key)
+print("")
 # print output ciphertext
-print("Here is the Ciphertext:", ciphertext)
+print("\N{ribbon}\N{ribbon}\N{ribbon} \033[0;32m Here is the Ciphertext: \N{ribbon}\N{ribbon}\N{ribbon} ")
+print("")
+print("\033[0;36;40m")
+print(pyfiglet.figlet_format(cipher_text, font = "basic", width = 150))
