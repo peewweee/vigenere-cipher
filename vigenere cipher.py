@@ -26,6 +26,8 @@ def vigenere_cipher(input_message, input_key):
                 cipher_text += chr((ord(char) - 97 + message_code) % 26 + 97)
             key_index += 1
 #       if character is not an alphabet, append as it is
+        else:
+            cipher_text += char
 #   return encrypted message
     return cipher_text
 
