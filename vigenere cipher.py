@@ -19,12 +19,12 @@ print("")
 # loading animation
 import time
 for i in range(3):
-    print("Generating your Ciphertext", end="")
+    print("\033[0;34m Generating your Ciphertext", end="\N{slightly smiling face}")
     for j in range(4):
         print(".", end="")
         time.sleep(0.25)
     print("\r", end="")
-print("DONE!")
+print("DONE!\N{grinning face}")
 
 # create a function to encrypt the message
 def vigenere_cipher(input_message, input_key):
