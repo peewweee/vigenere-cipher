@@ -15,10 +15,22 @@ input_key = input("\N{key} \033[0;33m What is your key?: ")
 input_message = input_message.upper()
 input_key = input_key.upper()
 
+print("")
+# loading animation
+import time
+for i in range(3):
+    print("Generating your Ciphertext", end="")
+    for j in range(4):
+        print(".", end="")
+        time.sleep(0.25)
+    print("\r", end="")
+print("DONE!")
+
 # create a function to encrypt the message
 def vigenere_cipher(input_message, input_key):
     cipher_text = ""
     key_index = 0
+
 #   iterate every character in the message
     for char in input_message:
 #       if character is an alphabet, encrypt with key character
