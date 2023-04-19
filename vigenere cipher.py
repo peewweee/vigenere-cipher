@@ -4,7 +4,11 @@
 #PSEUDOCODE
 
 # ask the user to input message and key
+input_message = input("Please enter your message: ")
+input_key = input("What is your key?: ")
 # convert message and key to uppercase letters
+input_message = input_message.upper()
+input_key = input_key.upper()
 
 # create a function to encrypt the message
 #   iterate every character in the message
